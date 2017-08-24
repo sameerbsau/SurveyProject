@@ -2,7 +2,7 @@
 
  app.config(function($stateProvider, $urlRouterProvider){
 	 
-	 $urlRouterProvider.otherwise('login');
+	 $urlRouterProvider.otherwise('dashBoard');
 	 $stateProvider.state({
 			name: 'login',
 			url: '/login',
@@ -18,8 +18,13 @@
 	url: '/page2',
 	templateUrl:'resources/pages/page2.html',
 	controller:'page2Controller'
+}).state({
+	name: 'dashBoard',
+	url: '/dashBoard',
+	templateUrl:'resources/pages/Dashboard.html',
+	/*controller:'page2Controller';*/
 });
-});
+ });
  
  app.controller('myCtrl',function(){
 	 

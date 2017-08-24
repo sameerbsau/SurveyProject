@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="ISO-8859-1">
-    <title>Merilytics</title>
+    <!-- <title>Merilytics</title> -->
 
 </head>
 
@@ -13,11 +13,7 @@
     <div id="login" ng-controller="myCtrl">
         <!-- <h1 style="color: red">{{myWelcome[0]}}</h1> -->
         <!-- <p ng-bind="myWelcome[0]"></p> -->
-        <div th:if="${#httpServletRequest.remoteUser != null}">
-    <p th:text="${#httpServletRequest.remoteUser}">
-      sample_user
-    </p>
-</div>
+       
         <form name="myForm" method="POST">
             <h3>Sign in</h3>
             <input type="email" placeholder="enter username" ng-model="vm.email" name="username" required/>
@@ -26,7 +22,7 @@
             <input type="password" placeholder="Enter Password" ng-model="vm.password" name="password" required/>
 
             <input type="button" id="login-btn" value="login" ng-click="loginCheck(vm)" />
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            
             <a href="#!london">forgot password</a>
         </form>
     </div>

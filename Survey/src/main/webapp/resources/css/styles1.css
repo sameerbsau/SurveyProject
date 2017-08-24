@@ -1,5 +1,5 @@
 body{
-    background: #292931;
+    background: #eaeadb;
 }
 input.ng-invalid{
     background-color: blue;
@@ -80,4 +80,12 @@ input.ng-invalid{
     border: 3px solid blue;
     border-radius: 12px;
     text-align: center;
+}
+.dashboard{
+	height: 40px; 
+	position: fixed; 
+	left: 0; 
+	right: 0; 
+	top: 0; 
+	background-color: green
 }
