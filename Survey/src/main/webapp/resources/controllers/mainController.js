@@ -22,7 +22,7 @@
 	name: 'dashBoard',
 	url: '/dashBoard',
 	templateUrl:'resources/pages/dashboard.html',
-	controller:'page2Controller'
+	/*controller:'page2Controller';*/
 });
  });
  
