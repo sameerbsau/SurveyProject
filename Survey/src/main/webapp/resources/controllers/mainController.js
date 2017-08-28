@@ -21,8 +21,8 @@
 }).state({
 	name: 'dashBoard',
 	url: '/dashBoard',
-	templateUrl:'resources/pages/Dashboard.html',
-	/*controller:'page2Controller';*/
+	templateUrl:'resources/pages/dashboard.html',
+	controller:'page2Controller'
 });
  });
  
