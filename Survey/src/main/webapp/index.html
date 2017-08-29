@@ -1,35 +1,82 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-  <meta charset="ISO-8859-1">
-    <title>Survey</title>
-    
-    <!-- bootstrap links -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <link rel="stylesheet" href="resources/css/styles1.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<meta charset="ISO-8859-1">
+<title>Survey</title>
 
-	<script type="text/javascript" src="resources/controllers/mainController.js"></script>
-	<script type="text/javascript" src="resources/controllers/login.js"></script>
-	<script type="text/javascript" src="resources/controllers/page2.js"></script>
+<!-- bootstrap links -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="resources/css/styles1.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+<script type="text/javascript"
+	src="resources/controllers/mainController.js"></script>
+<script type="text/javascript" src="resources/controllers/login.js"></script>
+<script type="text/javascript" src="resources/controllers/page2.js"></script>
 <style type="text/css">
- [ng\:cloak], [ng-cloak], .ng-cloak {
-  display: none !important;
-} 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
 </style>
 </head>
 <body ng-controller="myCtrl">
 
-<ui-view></ui-view>
+	<!-- dashboard -->
+	<nav class="navbar navbar-inverse" style="border-radius: 0px">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Survey App</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a ui-sref="dashBoard">Dashboard</a></li>
+					<li><a ui-sref="survey">Surveys</a></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Content<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Dropdown1</a></li>
+							<li><a href="#">Dropdown2</a></li>
+							<li><a href="#">Dropdown3</a></li>
+						</ul></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Resources</a></li>
+					<li><a href="#">Plan & Pricing</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+							Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+							Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 
+	<ui-view style="margin-bottom: 40px"></ui-view>
+	<div style="position: fixed; bottom: 0; left: 0; right: 0; height: 60px;  background-color: #8d848166">
+	<div style="position: absolute;bottom: 0;">
+		<p>Copyright &copy; Merilytics</p>
+		</div>
+	</div>
 </body>
-
+<!-- <footer>Copyright &copy; W3Schools.com</footer> -->
+<!-- border-top: 1px solid #9b9393; -->
 
 
 
