@@ -1,6 +1,8 @@
 package com.merilytics.dto;
 
-public class StaticMessagesDTO {
+import java.io.Serializable;
+
+public class StaticMessagesDTO implements Serializable{
 	private Integer roleId;
 	private String roleName;
 	private Boolean status;

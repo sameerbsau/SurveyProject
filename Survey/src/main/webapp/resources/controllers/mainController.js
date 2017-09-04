@@ -1,4 +1,4 @@
- var app = angular.module("myApp", ["ui.router",'myApp.login','myApp.page2']);
+ var app = angular.module("myApp", ["ui.router",'myApp.login','myApp.page2','myApp.survey']);
 
  app.config(function($stateProvider, $urlRouterProvider){
 	 
@@ -27,7 +27,7 @@
 	name: 'survey',
 	url: '/survey',
 	templateUrl:'resources/pages/surveys.html',
-	/*controller:'page2Controller'*/
+	controller:'surveyController'
 });
  });
  

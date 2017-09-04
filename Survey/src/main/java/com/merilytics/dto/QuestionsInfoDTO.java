@@ -1,5 +1,6 @@
 package com.merilytics.dto;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 /**
  * @project Survey
@@ -8,7 +9,7 @@ import java.sql.Timestamp;
  * @description 
  * 
  */
-public class QuestionsInfoDTO {
+public class QuestionsInfoDTO implements Serializable {
 	private Integer qsId;
 	private String surveyID;
 	private String questionId;

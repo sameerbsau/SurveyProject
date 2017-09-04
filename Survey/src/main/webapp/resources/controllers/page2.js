@@ -1,25 +1,25 @@
-var page2=angular.module('myApp.page2',[]);
+var page2 = angular.module('myApp.page2', []);
 
-page2.controller('page2Controller',function($scope,$http,$state){
-	
-	 $scope.test2 = function () {
+page2.controller('page2Controller', function($scope, $http, $state) {
 
-         var dataObj = { url: 'test', method: 'GET' }
-         $http(dataObj)
-             .then(function (response) {
+	$scope.test2 = function() {
 
-                 $scope.datum = response.data;
-                 alert( $scope.datum[0] );
-                 /*if($scope.datum.[0]=="success"){
-                	 $state.go("productMaster");
-                 }*/
-                 
-                 
+		var dataObj = {
+			url : 'test',
+			method : 'GET'
+		}
+		$http(dataObj).then(function(response) {
 
-             }, function myError(response) {
+			$scope.datum = response.data;
+			alert($scope.datum[0]);
+			/*
+			 * if($scope.datum.[0]=="success"){ $state.go("productMaster"); }
+			 */
 
-                 $scope.datum = response.statusText;
-             });
-	 }
-	
+		}, function myError(response) {
+
+			$scope.datum = response.statusText;
+		});
+	}
+
 })

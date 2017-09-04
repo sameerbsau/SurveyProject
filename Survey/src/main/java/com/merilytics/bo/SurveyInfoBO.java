@@ -1,18 +1,25 @@
 package com.merilytics.bo;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "tbl_survey_info")
 public class SurveyInfoBO {
 	@Id
+	@GenericGenerator(name = "gen", strategy = "native")
+	@GeneratedValue(generator = "gen")
 	private Integer SIId;
 	private String surveyID;
 	private String surveyName;
-	private String surveyType;
-	private String creationDate;
+	private String surveyTypeID;
+	private Timestamp creationDate;
 	public Integer getSIId() {
 		return SIId;
 	}
@@ -31,18 +38,17 @@ public class SurveyInfoBO {
 	public void setSurveyName(String surveyName) {
 		this.surveyName = surveyName;
 	}
-	public String getSurveyType() {
-		return surveyType;
+	public String getSurveyTypeID() {
+		return surveyTypeID;
 	}
-	public void setSurveyType(String surveyType) {
-		this.surveyType = surveyType;
+	public void setSurveyTypeID(String surveyTypeID) {
+		this.surveyTypeID = surveyTypeID;
 	}
-	public String getCreationDate() {
+	public Timestamp getCreationDate() {
 		return creationDate;
 	}
-	public void setCreationDate(String creationDate) {
+	public void setCreationDate(Timestamp creationDate) {
 		this.creationDate = creationDate;
 	}
 	
-
-}
+	}

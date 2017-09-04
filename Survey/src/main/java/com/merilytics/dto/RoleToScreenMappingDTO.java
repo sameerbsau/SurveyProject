@@ -1,5 +1,7 @@
 package com.merilytics.dto;
 
+import java.io.Serializable;
+
 /**
  * @project Survey
  * @author 21258
@@ -7,7 +9,7 @@ package com.merilytics.dto;
  * @description 
  * 
  */
-public class RoleToScreenMappingDTO {
+public class RoleToScreenMappingDTO implements Serializable{
 	
 	private Integer mappingId;
 	

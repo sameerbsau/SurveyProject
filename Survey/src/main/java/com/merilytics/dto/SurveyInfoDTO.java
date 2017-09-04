@@ -1,11 +1,14 @@
 package com.merilytics.dto;
 
-public class SurveyInfoDTO {
+import java.io.Serializable;
+import java.sql.Timestamp;
+
+public class SurveyInfoDTO implements Serializable {
 	private Integer SIId;
 	private String surveyID;
 	private String surveyName;
-	private String surveyType;
-	private String creationDate;
+	private String surveyTypeID;
+	private Timestamp creationDate;
 	public Integer getSIId() {
 		return SIId;
 	}
@@ -24,18 +27,22 @@ public class SurveyInfoDTO {
 	public void setSurveyName(String surveyName) {
 		this.surveyName = surveyName;
 	}
-	public String getSurveyType() {
-		return surveyType;
+	public String getSurveyTypeID() {
+		return surveyTypeID;
 	}
-	public void setSurveyType(String surveyType) {
-		this.surveyType = surveyType;
+	public void setSurveyTypeID(String surveyTypeID) {
+		this.surveyTypeID = surveyTypeID;
 	}
-	public String getCreationDate() {
+	public Timestamp getCreationDate() {
 		return creationDate;
 	}
-	public void setCreationDate(String creationDate) {
+	public void setCreationDate(Timestamp creationDate) {
 		this.creationDate = creationDate;
 	}
+	@Override
+	public String toString() {
+		return "SurveyInfoDTO [SIId=" + SIId + ", surveyID=" + surveyID + ", surveyName=" + surveyName
+				+ ", surveyTypeID=" + surveyTypeID + ", creationDate=" + creationDate + "]";
+	}
 	
-
-}
+	}

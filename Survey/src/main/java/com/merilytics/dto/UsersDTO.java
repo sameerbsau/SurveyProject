@@ -1,8 +1,9 @@
 package com.merilytics.dto;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class UsersDTO {
+public class UsersDTO implements Serializable {
 	private String email;
 	private Integer roleId;
 	private String firstName;

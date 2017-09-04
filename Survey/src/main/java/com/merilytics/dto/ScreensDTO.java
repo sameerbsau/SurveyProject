@@ -1,6 +1,8 @@
 package com.merilytics.dto;
 
-public class ScreensDTO {
+import java.io.Serializable;
+
+public class ScreensDTO implements Serializable {
 	private Integer screenId;
 	private String screenName;
 	private String status;

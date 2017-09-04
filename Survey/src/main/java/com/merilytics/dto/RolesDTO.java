@@ -1,5 +1,7 @@
 package com.merilytics.dto;
 
+import java.io.Serializable;
+
 /**
  * @project Survey
  * @author 21258
@@ -7,7 +9,7 @@ package com.merilytics.dto;
  * @description 
  * 
  */
-public class RolesDTO {
+public class RolesDTO implements Serializable{
 	private Integer roleId;
 	private String roleName;
 	private Boolean status;
