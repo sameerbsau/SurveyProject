@@ -27,11 +27,14 @@ public class SurveyCreationController {
 
 	@RequestMapping(value = "/surveyTypes", method = RequestMethod.GET)
 	public ResponseEntity<?> getSurverTypes() {
+		System.out.println("in survey types");
 		try {
 			List<StaticSurveyTypeDTO> listDTO = null;
 			listDTO = service.fetchSurveyTypes();
 			return new ResponseEntity<>(listDTO, HttpStatus.OK);
 		} catch (Exception e) {
+			
+			e.printStackTrace();
 			// TODO: handle exception
 			return new ResponseEntity<>("dataNOtFound", HttpStatus.BAD_REQUEST);
 		}
